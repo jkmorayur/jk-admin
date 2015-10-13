@@ -8,7 +8,7 @@
        public function __construct() {
             parent::__construct();
             $this->load->database();
-            $this->table = 'gtech_brand';
+            $this->table = TABLE_PREFIX . 'brand';
        }
 
        public function getBrands($id = '') {
@@ -21,15 +21,15 @@
             $brands = $this->db->get()->result_array();
             return $brands;
        }
-       
+
        public function getCount() {
             return $this->db->count_all($this->table);
        }
-       
+
        public function getBrandPagination($perPage, $offset) {
             return $this->db->get($this->table, $perPage, $offset)->result_array();
        }
-       
+
        /* 22-08-2015 */
 
        function getBrandByName($name) {
@@ -38,11 +38,12 @@
                  $this->db->select('*')->from($this->table);
                  $this->db->where('brd_title', $name);
                  return $this->db->get()->row_array();
-                  //echo $this->db->last_query();
+                 //echo $this->db->last_query();
             } else {
                  return null;
             }
        }
 
        /* 22-08-2015 */
-  } 
+  }
+  

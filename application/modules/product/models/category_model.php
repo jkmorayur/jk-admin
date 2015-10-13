@@ -8,7 +8,7 @@
        public function __construct() {
             parent::__construct();
             $this->load->database();
-            $this->table = 'gtech_category';
+            $this->table = TABLE_PREFIX.'category';
        }
 
        public function getCategories($id = '') {
