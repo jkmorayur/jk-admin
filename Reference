@@ -1,0 +1,4 @@
+Datetime picker
+---------------
+<input  type="text" placeholder="click to show datepicker"  class="datepicker">
+
