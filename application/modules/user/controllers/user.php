@@ -11,7 +11,7 @@
        public function index() {
 
             if ($this->ion_auth->logged_in()) {
-                 redirect(strtolower(__CLASS__) . '/dashboard');
+                 redirect('dashboard');
             } else {
                  redirect(strtolower(__CLASS__) . '/login');
             }
@@ -19,7 +19,7 @@
 
        public function login() {
             if ($this->ion_auth->logged_in()) {
-                 redirect(strtolower(__CLASS__) . '/dashboard');
+                 redirect('dashboard');
             }
 
             $this->body_class[] = 'login-page';
