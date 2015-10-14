@@ -95,6 +95,9 @@
                  $this->template->set('logged_uid', $logedUserDetails['id']);
             }
             /**/
+            if (strtolower($this->router->fetch_class()) != 'user') {
+                 //$this->lock_in();
+            }
        }
 
        /**
@@ -158,7 +161,7 @@
        public function lock_in() {
             if (!$this->ion_auth->logged_in()) {
                  $this->session->set_flashdata('app_error', 'Please log in first.');
-                 redirect('login');
+                 redirect('user/login');
             }
        }
 
