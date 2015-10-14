@@ -108,7 +108,7 @@
                     </li>
                     <!-- Product menu -->
                     <!-- Settings -->
-                    <li class="<?php echo ($controller == 'user') ? 'active' : ''; ?> sub-menu">
+                    <li class="<?php echo ($controller == 'user' || $controller == 'settings') ? 'active' : ''; ?> sub-menu">
                          <a href="javascript:;" class="">
                               <i class="icon-book"></i>
                               <span>Settings</span>
@@ -118,6 +118,10 @@
                               <li class="<?php echo ($method == 'change_password') ? 'active' : ''; ?>">
                                    <a href="<?php echo site_url('user/change_password'); ?>">
                                         <i class="icon-cogs"></i>Change Password</a>
+                              </li>
+                              <li class="<?php echo ($method == 'general_settings') ? 'active' : ''; ?>">
+                                   <a href="<?php echo site_url('settings/general_settings'); ?>">
+                                        <i class="icon-wrench"></i>General Settings</a>
                               </li>
                          </ul>
                     </li>

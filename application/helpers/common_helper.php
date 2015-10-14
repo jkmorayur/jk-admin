@@ -164,40 +164,16 @@
        }
   }
   
-  /* Left panel */
-
-  function getLefPanel($category_id, $acccnow = '', $active = '') {
-       
-       $sql = getSubCategories($category_id);
-
-       if (count($sql) > 0) {
-            echo ($category_id != 0) ? '<ul>' : '';
-
-            foreach ($sql as $key => $value) {
-                 $image = '';
-                 $catTitle = str_replace(' ', '_', strtolower(trim($value['cat_title'])));
-                 if ($category_id != 0) {
-                      $url = site_url() . '/product/cat/' . $catTitle;
-                 } else {
-                      $url = site_url() . '/category/index/' .$catTitle;
-                      if (getSubCategories($value['cat_id'])) {
-                           $image = ($acccnow == $value['cat_id']) ? '<img src="images/bullet3.png"/>' : '<img src="images/bullet4.png"/>';
-                      }
-                 }
-                 $clsAccnow = ($acccnow == $value['cat_id']) ? 'acccnow' : '';
-                 $clsActive = ($active == $value['cat_id'] || $acccnow == $value['cat_id']) ? 'active' : '';
-                 echo '<li class="' . $clsAccnow . '"><a class="' . $clsActive . '" href="' . $url . '">' . $value['cat_title'] . $image . '</a>';
-                 echo getLefPanel($value['cat_id'], $acccnow, $active);
-                 echo '</li>';
-            }
-            echo ($category_id != 0) ? '</ul>' : '';
+  /*Settings*/
+  function get_settings_by_key($key) {
+       if($key) {
+            global $CI;
+            $CI->load->model('settings_model');
+            $settings =  $CI->settings_model->getSettings($key);
+            return isset($settings['set_value']) ? $settings['set_value'] : '';
+       } else {
+            return false;
        }
   }
-  function getSubCategories($catId) {
-       global $CI;
-       $CI->load->model('home_model');
-       return $CI->home_model->getSubCategories($catId);
-  }
-
-  /* Left panel */
+  /*Settings*/
 ?>
