@@ -62,6 +62,13 @@
                                    <b class="caret"></b>
                               </a>
                               <ul class="dropdown-menu extended logout">
+                                   <?php if (get_settings_by_key('site_url')) { ?>
+                                          <li>
+                                               <a target="_blank" href="<?php echo get_settings_by_key('site_url'); ?>">
+                                                    <i class="icon-key"></i> View Site
+                                               </a>
+                                          </li>
+                                   <?php } ?>
                                    <li><a href="<?php echo site_url('user/logout'); ?>"><i class="icon-key"></i> Log Out</a></li>
                               </ul>
                          </li>
