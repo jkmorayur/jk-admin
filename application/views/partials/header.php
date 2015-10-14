@@ -28,7 +28,8 @@
                <!--END SIDEBAR TOGGLE-->
                <!-- BEGIN LOGO -->
                <a class="brand" href="javascript:void(0);">
-                    <img src="images/logo.png" alt="Metro Lab" />
+                    <img width="132" src="<?php echo '.'.UPLOAD_PATH . 'admin_log/' . get_settings_by_key('site_logo'); ?>" 
+                         alt="<?php echo get_settings_by_key('site_name') ?>" />
                </a>
                <!-- END LOGO -->
                <!-- BEGIN RESPONSIVE MENU TOGGLER -->

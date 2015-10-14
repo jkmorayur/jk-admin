@@ -1,3 +1,13 @@
+<div style="" class="cart_notificationbg success hide">
+     <a class="notifi_close" onclick="$(this).parent().hide();" href="javascript:void(0);">
+          <i class="icon-remove-circle"></i>
+     </a>
+     <span id="msg">
+          <i class="icon-thumbs-up"></i>
+          <span class="sus_msg"></span>
+     </span>
+</div>
+
 <?php if ($alert = $this->session->flashdata('app_alert')): ?>
        <div style="" class="cart_notificationbg msgBox">
             <a class="notifi_close" onclick="$(this).parent().hide();" href="javascript:void(0);">
@@ -44,4 +54,5 @@
                  <?php echo $info ?>
             </span>
        </div>
-  <?php endif ?>
+       <?php
+   endif ?>

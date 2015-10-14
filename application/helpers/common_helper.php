@@ -168,7 +168,7 @@
   function get_settings_by_key($key) {
        if($key) {
             global $CI;
-            $CI->load->model('settings_model');
+            $CI->load->model('settings/settings_model');
             $settings =  $CI->settings_model->getSettings($key);
             return isset($settings['set_value']) ? $settings['set_value'] : '';
        } else {

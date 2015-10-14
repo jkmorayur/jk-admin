@@ -37,6 +37,6 @@ define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
 define('TABLE_PREFIX','gtech_');
-
+define('UPLOAD_PATH','./assets/uploads/');
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

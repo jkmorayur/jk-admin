@@ -23,8 +23,8 @@
      <body class="lock">
           <div class="lock-header">
                <!-- BEGIN LOGO -->
-               <a class="center" id="logo" href="index-2.html">
-                    <img class="center" alt="logo" src="images/logo.png">
+               <a class="center" id="logo" href="javascript:void(0);">
+                    <img class="center" alt="logo" src="<?php echo '.'.UPLOAD_PATH . 'admin_log/' . get_settings_by_key('site_logo'); ?>">
                </a>
                <!-- END LOGO -->
           </div>
