@@ -39,6 +39,12 @@
                                                        <input value="<?php echo get_settings_by_key('site_name'); ?>" type="text" placeholder="Site Name" class="input-xxlarge" name="settings[site_name]" />
                                                   </div>
                                              </div>
+                                             <div class="control-group">
+                                                  <label class="control-label">Dashboard Content</label>
+                                                  <div class="controls">
+                                                       <textarea  placeholder="Dashboard Content" class="input-xxlarge editor" name="settings[dashboard_content]"><?php echo get_settings_by_key('dashboard_content'); ?></textarea>
+                                                  </div>
+                                             </div>
                                              <?php if (get_settings_by_key('site_logo')) { ?>
                                                     <div class="form-group">
                                                          <label class="control-label"></label>
