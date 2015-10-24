@@ -41,7 +41,7 @@ $config['parser_body_enabled'] = FALSE;
 |
 */
 
-$config['title_separator'] = ' | ';
+$config['title_separator'] = '';
 
 /*
 |--------------------------------------------------------------------------

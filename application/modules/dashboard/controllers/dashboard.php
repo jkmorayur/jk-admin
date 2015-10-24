@@ -6,6 +6,7 @@
 
        public function __construct() {
             parent::__construct();
+            $this->page_title = "Dashboard";
        }
 
        public function index() {
