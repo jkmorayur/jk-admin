@@ -170,18 +170,6 @@
                            }
                       }
                  }
-                 /* Delete product docs */
-                 $this->db->where('pdc_prod_id', $id);
-                 $docs = $this->db->get(TABLE_PREFIX . 'prod_docs')->result_array();
-                 $this->db->delete(TABLE_PREFIX . 'prod_docs', array('pdc_prod_id' => $id));
-                 if (!empty($images)) {
-                      foreach ($images as $key => $value) {
-                           if (file_exists('./assets/uploads/product_docs/' . $value['pdc_title'])) {
-                                unlink('./assets/uploads/product_docs/' . $value['pdc_title']);
-                           }
-                      }
-                 }
-                 /* Delete product docs */
                  return true;
             } else {
                  return false;

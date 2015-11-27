@@ -6,7 +6,7 @@
                     <h4><i class="icon-list-ul"></i> <?php echo $this->section; ?></h4>
                </div>
                <div class="widget-body">
-                    <table class="table table-striped table-bordered" id="sample_1">
+                    <table class="table table-bordered table-striped" id="sample">
                          <thead>
                               <tr>
                                    <th class="hidden-phone">Name</th>
@@ -47,7 +47,7 @@
                                                     </a>
                                                </td>
                                                <td  class="hidden-phone">
-                                                    <a class="pencile delete" id="<?php echo $value['prd_id']; ?>" href="javascript:void(0);" data-url="<?php echo site_url('product/delete/' . $value['prd_id']); ?>">
+                                                    <a class="pencile deleteRow" id="<?php echo $value['prd_id']; ?>" href="javascript:void(0);" data-url="<?php echo site_url('product/delete/' . $value['prd_id']); ?>">
                                                          <i class="icon-trash"></i>
                                                          </span>
                                                </td>
